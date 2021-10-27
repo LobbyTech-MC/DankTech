@@ -1,5 +1,17 @@
 package io.github.sefiraat.danktech;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
+import org.bukkit.configuration.InvalidConfigurationException;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.java.JavaPluginLoader;
+
 import co.aikar.commands.PaperCommandManager;
 import io.github.sefiraat.danktech.commands.Commands;
 import io.github.sefiraat.danktech.configuration.Config;
@@ -12,21 +24,8 @@ import io.github.sefiraat.danktech.misc.Protection;
 import io.github.sefiraat.danktech.misc.SlimefunDankAddon;
 import io.github.sefiraat.danktech.misc.SupportedPlugins;
 import io.github.sefiraat.danktech.misc.Utils;
-import io.github.sefiraat.danktech.timers.TimerHooks;
 import io.github.sefiraat.danktech.timers.TimerSave;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-import org.bstats.bukkit.Metrics;
-import org.bstats.charts.SimplePie;
-import org.bukkit.configuration.InvalidConfigurationException;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.plugin.java.JavaPluginLoader;
-
-import javax.annotation.Nonnull;
-import java.io.File;
-import java.io.IOException;
 
 public class DankTech extends JavaPlugin {
 
@@ -151,7 +150,6 @@ public class DankTech extends JavaPlugin {
         createItemBlacklistConfig();
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void createDankStorageConfig() {
         dankStorageConfigFile = new File(getDataFolder(), "DankStorages.yml");
         if (!dankStorageConfigFile.exists()) {
@@ -174,7 +172,6 @@ public class DankTech extends JavaPlugin {
         }
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void createItemBlacklistConfig() {
         itemBlacklistConfigFile = new File(getDataFolder(), "BlacklistedItems.yml");
         if (!itemBlacklistConfigFile.exists()) {

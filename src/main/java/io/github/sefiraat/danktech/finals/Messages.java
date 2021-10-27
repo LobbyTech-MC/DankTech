@@ -10,7 +10,7 @@ public final class Messages {
     }
 
     // General
-    public static final String PREFIX = "" + ChatColor.GRAY + "[DankTech] ";
+    public static final String PREFIX = "" + ChatColor.GRAY + "[坦克科技] ";
     public static final String SUFFIX = "" + ChatColor.GRAY + "";
 
     public static final String WARNING = "" + ChatColor.YELLOW;
@@ -19,7 +19,7 @@ public final class Messages {
     public static final String PASSIVE = "" + ChatColor.GRAY;
     public static final String SUCCESS = "" + ChatColor.GREEN;
 
-    public static final String ID = " - ID: ";
+    public static final String ID = " - id: ";
 
     // Commands
     public static String messageCommandSubcommand() {

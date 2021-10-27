@@ -1,16 +1,11 @@
 package io.github.sefiraat.danktech.implementation.gui;
 
-import dev.triumphteam.gui.builder.item.ItemBuilder;
-import dev.triumphteam.gui.guis.Gui;
-import dev.triumphteam.gui.guis.GuiItem;
-import dev.triumphteam.gui.guis.PaginatedGui;
-import dev.triumphteam.gui.guis.StorageGui;
-import io.github.sefiraat.danktech.finals.GUIItems;
-import io.github.sefiraat.danktech.finals.ItemDetails;
-import io.github.sefiraat.danktech.finals.Messages;
-import io.github.sefiraat.danktech.implementation.dankpacks.DankPack;
-import io.github.sefiraat.danktech.misc.Config;
-import io.github.sefiraat.danktech.misc.ContainerStorage;
+import static io.github.sefiraat.danktech.finals.ItemDetails.getDankNameBold;
+import static io.github.sefiraat.danktech.implementation.gui.DankGUI.getDankGUI;
+
+import java.util.Arrays;
+import java.util.List;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -18,11 +13,16 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.Arrays;
-import java.util.List;
-
-import static io.github.sefiraat.danktech.finals.ItemDetails.getDankNameBold;
-import static io.github.sefiraat.danktech.implementation.gui.DankGUI.getDankGUI;
+import dev.triumphteam.gui.builder.item.ItemBuilder;
+import dev.triumphteam.gui.guis.Gui;
+import dev.triumphteam.gui.guis.GuiItem;
+import dev.triumphteam.gui.guis.PaginatedGui;
+import io.github.sefiraat.danktech.finals.GUIItems;
+import io.github.sefiraat.danktech.finals.ItemDetails;
+import io.github.sefiraat.danktech.finals.Messages;
+import io.github.sefiraat.danktech.implementation.dankpacks.DankPack;
+import io.github.sefiraat.danktech.misc.Config;
+import io.github.sefiraat.danktech.misc.ContainerStorage;
 
 public class AdminGUI {
 
@@ -37,11 +37,11 @@ public class AdminGUI {
         int forwardSlot = 52;
         List<Integer> listFillerSlots = Arrays.asList(arrayFillerSlots);
 
-        PaginatedGui g = new PaginatedGui(6, "Admin Dank GUI");
+        PaginatedGui g = new PaginatedGui(6, "坦克管理");
 
         g.setItem(listFillerSlots, GUIItems.guiPackFiller());
-        g.setItem(backSlot, ItemBuilder.from(Material.PAPER).setName("Previous").asGuiItem(event -> g.previous()));
-        g.setItem(forwardSlot, ItemBuilder.from(Material.PAPER).setName("Next").asGuiItem(event -> g.next()));
+        g.setItem(backSlot, ItemBuilder.from(Material.PAPER).setName("上一页").asGuiItem(event -> g.previous()));
+        g.setItem(forwardSlot, ItemBuilder.from(Material.PAPER).setName("下一页").asGuiItem(event -> g.next()));
 
         for (ItemStack i : Config.getAllDanks()) {
             ItemMeta im = i.getItemMeta();
@@ -55,8 +55,8 @@ public class AdminGUI {
             lore.add(ChatColor.LIGHT_PURPLE + Config.getLastOpenedByUUID(dankId));
             lore.add(ChatColor.LIGHT_PURPLE + Config.getLastOpenedOn(dankId));
             lore.add("");
-            lore.add(ChatColor.GREEN + "Left click to open");
-            lore.add(ChatColor.GREEN + "Right click recover");
+            lore.add(ChatColor.GREEN + "左键打开");
+            lore.add(ChatColor.GREEN + "右键撤销");
             im.setLore(lore);
             i.setItemMeta(im);
             GuiItem dankGuiItem = new GuiItem(i, event -> adminClickDank(event, dankId, dankLevel));

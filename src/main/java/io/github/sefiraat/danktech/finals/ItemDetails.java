@@ -290,11 +290,11 @@ public final class ItemDetails {
     private static final String DANK_ERROR_STRING = "DANK_ERR";
 
     private static String dankLoreSelectedStack(@Nullable String stringOptional) {
-        String itemType = "" + ChatColor.GRAY + "Empty";
+        String itemType = "" + ChatColor.GRAY + "空";
         if (stringOptional != null) {
             itemType = "" + ChatColor.GREEN + stringOptional;
         }
-        return "" + ChatColor.GOLD + "Selected Item: " + itemType;
+        return "" + ChatColor.GOLD + "选择的物品: " + itemType;
     }
 
     private static List<String> dankLoreBuilder(String slots, String volume, long dankID, @Nullable String selectedStack) {
@@ -326,7 +326,7 @@ public final class ItemDetails {
         l.add(dankTrashVoid());
         l.add("");
         l.add(dankLoreRightClick());
-        l.add(ChatColor.GRAY + "Pack ID: " + dankID);
+        l.add(ChatColor.GRAY + "坦克id: " + dankID);
         return l;
     }
 
@@ -413,8 +413,8 @@ public final class ItemDetails {
                 ChatColor.WHITE + DankTech.getInstance().getConfigClass().getStrings().getGuiInteractDropClickAction();
     }
 
-    public static final String GUI_DISPLAY_TRASH_NAME_WITHDRAW = "" + ChatColor.RED + "Remove Item";
-    public static final String GUI_DISPLAY_TRASH_LORE_LEFT = "" + ChatColor.GOLD + "Left Click: " + ChatColor.WHITE + "Reset slot";
+    public static final String GUI_DISPLAY_TRASH_NAME_WITHDRAW = "" + ChatColor.RED + "移除物品";
+    public static final String GUI_DISPLAY_TRASH_LORE_LEFT = "" + ChatColor.GOLD + "左键: " + ChatColor.WHITE + "重置物品槽";
 
     public static List<String> guiDisplayLoreWithdraw(int amount) {
         List<String> l = new ArrayList<>();
@@ -426,9 +426,9 @@ public final class ItemDetails {
         l.add(guiDisplayWithdrawLoreDrop());
         l.add("");
         if (amount > 0) {
-            l.add("" + ChatColor.BLUE + "Amount: " + ChatColor.WHITE + amount);
+            l.add("" + ChatColor.BLUE + "数量: " + ChatColor.WHITE + amount);
         } else {
-            l.add("" + ChatColor.BLUE + "Amount: " + ChatColor.GRAY + "Empty");
+            l.add("" + ChatColor.BLUE + "数量: " + ChatColor.GRAY + "空");
         }
         return l;
     }
@@ -440,6 +440,6 @@ public final class ItemDetails {
         return l;
     }
 
-    public static final String SLIMEFUN_DISPLAY_CATEGORY_NAME = "" + ChatColor.YELLOW + "DankTech";
+    public static final String SLIMEFUN_DISPLAY_CATEGORY_NAME = "" + ChatColor.YELLOW + "坦克科技";
 
 }

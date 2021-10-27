@@ -36,12 +36,12 @@ public class SlimefunDankAddon implements SlimefunAddon {
         ItemStack categoryItemMain = SkullCreator.itemFromBase64(Materials.DANK_SLIMEFUN_CATEGORY);
         ItemMeta im = categoryItemMain.getItemMeta();
         im.setDisplayName(SLIMEFUN_DISPLAY_CATEGORY_NAME);
-        im.setLore(Collections.singletonList("&a> Click to open"));
+        im.setLore(Collections.singletonList("&a> 点击打开"));
         categoryItemMain.setItemMeta(im);
         ItemGroup dankCategory = new ItemGroup(categoryIdMain, categoryItemMain);
 
         // Items
-        Utils.dbgMsg("Cells");
+        Utils.dbgMsg("组件");
         List<SlimefunItemStack> cells =  new ArrayList<>();
         for (int i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
@@ -52,7 +52,7 @@ public class SlimefunDankAddon implements SlimefunAddon {
         }
 
         List<SlimefunItemStack> danks = new ArrayList<>();
-        Utils.dbgMsg("Dank Packs");
+        Utils.dbgMsg("坦克");
         for (Integer i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
             SlimefunItemStack dankPackStack = new SlimefunItemStack( "DANK_PACK_" + i, ItemStacks.getShallowDank(i));
@@ -67,7 +67,7 @@ public class SlimefunDankAddon implements SlimefunAddon {
         }
 
         List<SlimefunItemStack> trashes = new ArrayList<>();
-        Utils.dbgMsg("Trash Packs");
+        Utils.dbgMsg("垃圾桶");
         for (Integer i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
             SlimefunItemStack dankTrashStack = new SlimefunItemStack( "DANK_TRASH_" + i, ItemStacks.getShallowTrash(i));
