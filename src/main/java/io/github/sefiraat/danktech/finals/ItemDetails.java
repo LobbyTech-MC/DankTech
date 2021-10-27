@@ -326,7 +326,7 @@ public final class ItemDetails {
         l.add(dankTrashVoid());
         l.add("");
         l.add(dankLoreRightClick());
-        l.add(ChatColor.GRAY + "坦克id: " + dankID);
+        l.add(ChatColor.GRAY + "水球id: " + dankID);
         return l;
     }
 
@@ -440,6 +440,6 @@ public final class ItemDetails {
         return l;
     }
 
-    public static final String SLIMEFUN_DISPLAY_CATEGORY_NAME = "" + ChatColor.YELLOW + "坦克科技";
+    public static final String SLIMEFUN_DISPLAY_CATEGORY_NAME = "" + ChatColor.YELLOW + "水球科技";
 
 }

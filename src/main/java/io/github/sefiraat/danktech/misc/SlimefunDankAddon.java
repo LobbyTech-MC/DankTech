@@ -41,7 +41,7 @@ public class SlimefunDankAddon implements SlimefunAddon {
         ItemGroup dankCategory = new ItemGroup(categoryIdMain, categoryItemMain);
 
         // Items
-        Utils.dbgMsg("组件");
+        Utils.dbgMsg("材料");
         List<SlimefunItemStack> cells =  new ArrayList<>();
         for (int i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
@@ -52,7 +52,7 @@ public class SlimefunDankAddon implements SlimefunAddon {
         }
 
         List<SlimefunItemStack> danks = new ArrayList<>();
-        Utils.dbgMsg("坦克");
+        Utils.dbgMsg("水球");
         for (Integer i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
             SlimefunItemStack dankPackStack = new SlimefunItemStack( "DANK_PACK_" + i, ItemStacks.getShallowDank(i));
@@ -67,7 +67,7 @@ public class SlimefunDankAddon implements SlimefunAddon {
         }
 
         List<SlimefunItemStack> trashes = new ArrayList<>();
-        Utils.dbgMsg("垃圾桶");
+        Utils.dbgMsg("水球废料");
         for (Integer i = 1; i < 10; i++) {
             Utils.dbgMsg(" -- " + i);
             SlimefunItemStack dankTrashStack = new SlimefunItemStack( "DANK_TRASH_" + i, ItemStacks.getShallowTrash(i));

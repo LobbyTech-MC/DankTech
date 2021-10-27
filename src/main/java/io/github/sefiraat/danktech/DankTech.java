@@ -93,7 +93,7 @@ public class DankTech extends JavaPlugin {
     public void onEnable() {
 
         getLogger().info("########################################");
-        getLogger().info("     Dank Tech - Created by Sefiraat    ");
+        getLogger().info("  水球科技 - 作者:Sefiraat - 汉化:LobbyTech  ");
         getLogger().info("########################################");
 
         instance = this;

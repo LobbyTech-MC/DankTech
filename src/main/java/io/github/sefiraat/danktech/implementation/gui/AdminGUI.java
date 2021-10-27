@@ -37,7 +37,7 @@ public class AdminGUI {
         int forwardSlot = 52;
         List<Integer> listFillerSlots = Arrays.asList(arrayFillerSlots);
 
-        PaginatedGui g = new PaginatedGui(6, "坦克管理");
+        PaginatedGui g = new PaginatedGui(6, "水球菜单");
 
         g.setItem(listFillerSlots, GUIItems.guiPackFiller());
         g.setItem(backSlot, ItemBuilder.from(Material.PAPER).setName("上一页").asGuiItem(event -> g.previous()));

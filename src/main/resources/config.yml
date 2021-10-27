@@ -1,4 +1,4 @@
-auto-update: true
+auto-update: false
 GENERAL:
   DEBUG: true
   BLACKLISTED_WORLDS_OPEN_PACK:
@@ -23,7 +23,7 @@ VALUES:
   AMOUNT_PER_SLOT_T9: 2147483547 # DO NOT GO ABOVE 2147483547
 TEXTS:
   GUI:
-    FILLER: "Get dank!"
+    FILLER: "获得坦克!"
     INFO_NAME: "Pack Info"
     INFO_LORE_ID: "Dank ID"
     INFO_LORE_LEVEL: "Dank Level"

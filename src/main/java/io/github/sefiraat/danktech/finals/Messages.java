@@ -10,7 +10,7 @@ public final class Messages {
     }
 
     // General
-    public static final String PREFIX = "" + ChatColor.GRAY + "[坦克科技] ";
+    public static final String PREFIX = "" + ChatColor.GRAY + "[水球科技] ";
     public static final String SUFFIX = "" + ChatColor.GRAY + "";
 
     public static final String WARNING = "" + ChatColor.YELLOW;
