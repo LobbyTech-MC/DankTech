@@ -1,34 +1,5 @@
 package io.github.sefiraat.danktech.listeners;
 
-import com.gmail.nossr50.mcMMO;
-import dev.triumphteam.gui.guis.Gui;
-import dev.triumphteam.gui.guis.StorageGui;
-import io.github.sefiraat.danktech.DankTech;
-import io.github.sefiraat.danktech.finals.ItemDetails;
-import io.github.sefiraat.danktech.finals.Messages;
-import io.github.sefiraat.danktech.implementation.dankpacks.DankPack;
-import io.github.sefiraat.danktech.implementation.dankpacks.TrashPack;
-import io.github.sefiraat.danktech.misc.Config;
-import io.github.sefiraat.danktech.misc.ContainerStorage;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-
-import javax.annotation.Nonnull;
-import java.util.Collection;
-
 import static io.github.sefiraat.danktech.finals.Constants.CONFIG_GETTER_SECTION_DANK_ID;
 import static io.github.sefiraat.danktech.finals.Constants.CONFIG_GETTER_SECTION_TRASH_ID;
 import static io.github.sefiraat.danktech.finals.Constants.CONFIG_GETTER_VAL_LEVEL;
@@ -44,6 +15,37 @@ import static io.github.sefiraat.danktech.misc.Config.getNextTrashID;
 import static io.github.sefiraat.danktech.misc.Config.getWorldBlacklistOpen;
 import static io.github.sefiraat.danktech.misc.Config.getWorldBlacklistPlace;
 import static io.github.sefiraat.danktech.misc.ContainerStorage.isShallow;
+
+import java.util.Collection;
+
+import javax.annotation.Nonnull;
+
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import com.gmail.nossr50.mcMMO;
+
+import dev.triumphteam.gui.guis.Gui;
+import io.github.sefiraat.danktech.DankTech;
+import io.github.sefiraat.danktech.finals.ItemDetails;
+import io.github.sefiraat.danktech.finals.Messages;
+import io.github.sefiraat.danktech.implementation.dankpacks.DankPack;
+import io.github.sefiraat.danktech.implementation.dankpacks.TrashPack;
+import io.github.sefiraat.danktech.misc.Config;
+import io.github.sefiraat.danktech.misc.ContainerStorage;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class ItemRightClickListener implements Listener {
 

@@ -1,9 +1,9 @@
 package io.github.sefiraat.danktech.implementation.gui;
 
-import dev.triumphteam.gui.guis.Gui;
-import dev.triumphteam.gui.guis.StorageGui;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+
+import dev.triumphteam.gui.guis.Gui;
 
 public class GUIWithdrawBase {
     private final Player player;
